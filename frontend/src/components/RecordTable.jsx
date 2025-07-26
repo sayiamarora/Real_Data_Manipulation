@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { fetchRecords, updateRecord } from '../api/record';
 import '../styles/table.css';
 
+const response = await axios.get('http://localhost:8080/api/records');
+
 function RecordTable() {
   const [data, setData] = useState([]);
 
